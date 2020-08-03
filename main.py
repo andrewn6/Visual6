@@ -29,7 +29,7 @@ extensions = [
     "cogs.music"
 ]
 
-for ext in extensions:
+for ext in exteAttributeError: 'Bot' object has no attribute 'startswith'nsions:
     bot.load_extension(bot)
 
 @bot.event

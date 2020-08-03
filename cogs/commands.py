@@ -1,6 +1,9 @@
 import discord
 from discord.ext import commands
+from discord.ext.commands import errors
+
 import aiohttp
+from aiohttp import ClientSession
 
 
 class Commands(commands.Cog):
@@ -9,7 +12,7 @@ class Commands(commands.Cog):
 
     @commands.command()
     async def hello(self, ctx):
-        await ctx.send(f"Hello" {member.mention})
+        await ctx.send(f"Hello", {member.mention})
 
 
 def setup(bot):
