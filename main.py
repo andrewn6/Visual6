@@ -1,36 +1,28 @@
 import discord
 from discord.ext import commands
-
-
 import json
+
 import asyncio
 import os
 
+import dotenv
+from dotenv import load_dotenv
 
-#def read(FileNameAndPath):
-  #  with open(FileNameAndPath, "r") as f:
-     #   return json.load(f)
+load_dotenv()
 
-#private = read("./private/tokens.json")
-#data = read("./private/data.json")
-
-#token = private.get("token")
-
-#activity_1 = data.get("activity_1")
-
-#activity_2 = data.get("activity_2")
+def read(FileNameAndPath):
+    with open(FileNameAndPath, "r") as f:
+        json.load(f)
+        
 
 bot =  commands.Bot(command_prefix="!v")
-token = "NzAzMjgwMTg1NDY1NjM0ODU3.XqMStg.xhQANolDBuzYk7mO57noqLBGbXQ"
-extensions = [
-    "cogs.modcommands"
-    "cogs.commands"
-    "cogs.hypixelstats"
-    "cogs.music"
-]
 
-for ext in exteAttributeError: 'Bot' object has no attribute 'startswith'nsions:
-    bot.load_extension(bot)
+token = os.getenv('client_id')
+
+
+for filename in os.listdir("/home/andrew/Documents/visualbot/bot/cogs"):
+    if filename.endswith('.py'):
+        bot.load_extension(f'cogs.{filename[:-3]}')
 
 @bot.event
 async def on_ready():

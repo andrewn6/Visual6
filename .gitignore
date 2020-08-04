@@ -2,3 +2,4 @@ tokens.json
 /__pycache__
 /private
 .pyc
+.env
