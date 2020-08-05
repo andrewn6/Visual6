@@ -8,6 +8,7 @@ class Errors(commands.Cog):
     def __init__(self, bot):
         self.bot
 
+    
 
 
 def setup(bot):
