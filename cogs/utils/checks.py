@@ -39,15 +39,15 @@ def is_coolkid_check():
 
 def is_marc_check():
     def predicate(ctx):
-        return is_marc(ctx.author):
+        return is_marc(ctx.author)
     return check(predicate)
 
 def is_anthony_check():
     def predicate(ctx):
-        return is_anthony(ctx.author):
+        return is_anthony(ctx.author)
     return check(predicate)
 
 # Checks which guild to find the roles
 def twt():
     def predicate(ctx):
-        return ctx.guild.id = 700687880443396136
+        return ctx.guild.id == 700687880443396136
